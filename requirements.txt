@@ -4,3 +4,4 @@ torchmetrics
 accelerate
 pytorchvideo
 wandb
+fire
