@@ -52,3 +52,5 @@ Kinetics(
   split='val'
 )
 ```
+
+In this case, `./data` becomes `/path/to/kinetics/root` from above.
