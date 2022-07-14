@@ -1,0 +1,6 @@
+torch
+torchvision
+torchmetrics
+accelerate
+pytorchvideo
+wandb
