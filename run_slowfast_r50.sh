@@ -1,0 +1,12 @@
+accelerate launch run.py \
+--output_dir outputs \
+--batch_size 8 \
+--num_workers 8 \
+--gradient_accumulation_steps 4 \
+--checkpointing_steps epoch \
+--mixed_precision fp16 \
+--with_tracking \
+--num_frames 32 \
+--sampling_rate 2 \
+--is_slowfast \
+--pin_memory
