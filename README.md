@@ -39,14 +39,14 @@ from torchvision.datasets import Kinetics
 
 ds = Kinetics(
   root='./data',
-  frames_per_clip=16,
+  frames_per_clip=16,  # This arg doesn't do anything in our case
   num_classes='700',
   download=True,
   split='train'
 )
 Kinetics(
   root='./data',
-  frames_per_clip=16,
+  frames_per_clip=16,  # This arg doesn't do anything in our case
   num_classes='700',
   download=True,
   split='val'
