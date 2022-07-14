@@ -37,7 +37,7 @@ accelerate launch run.py \
 ```python
 from torchvision.datasets import Kinetics
 
-ds = Kinetics(
+Kinetics(
   root='./data',
   frames_per_clip=16,  # This arg doesn't do anything in our case
   num_classes='700',
