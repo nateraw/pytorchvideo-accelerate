@@ -14,10 +14,11 @@ Uses `accelerate` for distributed training, `wandb` for logging, `torchmetrics` 
 
 3. Finally, launch the script:
 
-Edit any args below as needed...
+Edit any args below as needed...`data_dir` should be a directory containing `train` and `val` split directories of the Kinetics dataset, which I just created by running the init of the [Kinetics dataset from `torchvision`](https://pytorch.org/vision/main/generated/torchvision.datasets.Kinetics.html) for both train and val.
 
 ```
 accelerate launch run.py \
+--data_dir /path/to/kinetics/root \
 --output_dir outputs \
 --batch_size 8 \
 --num_workers 8 \
@@ -31,3 +32,23 @@ accelerate launch run.py \
 --pin_memory
 ```
 
+## Data preparation
+
+```python
+from torchvision.datasets import Kinetics
+
+ds = Kinetics(
+  root='./data',
+  frames_per_clip=16,
+  num_classes='700',
+  download=True,
+  split='train'
+)
+Kinetics(
+  root='./data',
+  frames_per_clip=16,
+  num_classes='700',
+  download=True,
+  split='val'
+)
+```
